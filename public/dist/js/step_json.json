@@ -1,0 +1,179 @@
+[
+  {
+    "msgId": null,
+    "msgFlag": "msg-AAA",
+    "msgTitle": "訊息A",
+    "msgDesc": "訊息A描述",
+    "msgInfo": [
+      {
+        "type": "text",
+        "content": "文字內容"
+      },
+      {
+        "type": "image",
+        "content": "https://crm.ogilvyone.info/msgPushImg/2020-10-27/1603766508.png"
+      },
+      {
+        "type": "video",
+        "content": {
+          "videoimg": "https://crm.ogilvyone.info/msgPushImg/2020-10-27/1603766554.png",
+          "video": "https://crm.ogilvyone.info/msgPushVideo/2020-10-27/1603766735.mp4"
+        }
+      },
+      {
+        "type": "imagemap",
+        "content": {
+          "ImagemapPicSize": "",
+          "ImagemapModelType": "m1",
+          "previewMsg": "預覽訊息",
+          "imageurl": "https://crm.ogilvyone.info/msgPushImg/2020-10-27/1603766577.png",
+          "ImagemapContent": "{\"type\":\"imagemap\",\"baseUrl\":\"PROVIDE_URL_FROM_YOUR_SERVER\",\"altText\":\"This is an imagemap\",\"baseSize\":{\"width\":1040,\"height\":1040},\"actions\":[{\"type\":\"message\",\"area\":{\"x\":0,\"y\":0,\"width\":346,\"height\":520},\"text\":\"按鈕 1 內容\"},{\"type\":\"uri\",\"area\":{\"x\":347,\"y\":0,\"width\":347,\"height\":520},\"linkUri\":\"https://yahoo.com.tw\"},{\"type\":\"message\",\"area\":{\"x\":694,\"y\":0,\"width\":347,\"height\":520},\"text\":\"按鈕 3 內容\"},{\"type\":\"uri\",\"area\":{\"x\":0,\"y\":520,\"width\":346,\"height\":520},\"linkUri\":\"https://yahoo.com.tw\"},{\"type\":\"message\",\"area\":{\"x\":347,\"y\":520,\"width\":347,\"height\":520},\"text\":\"按鈕 5 內容\"},{\"type\":\"uri\",\"area\":{\"x\":694,\"y\":520,\"width\":347,\"height\":520},\"linkUri\":\"https://yahoo.com.tw\"}]}"
+        }
+      },
+      {
+        "type": "carousel",
+        "content": {
+          "imgAspectRatio": "square",
+          "previewMsg": "預覽訊息",
+          "slides": [
+            {
+              "imageUrl": "https://crm.ogilvyone.info/msgPushImg/2020-10-27/1603766631.png",
+              "title": "標題 (最大40字)",
+              "desc": "內文 (最大60字)",
+              "buttons": [
+                {
+                  "title": "按鈕1標題 (最大12字",
+                  "action": "message",
+                  "content": "按鈕1內容"
+                },
+                {
+                  "title": "按鈕2標題",
+                  "action": "uri",
+                  "content": "https://yahoo.com.tw"
+                }
+              ]
+            },
+            {
+              "imageUrl": "https://crm.ogilvyone.info/msgPushImg/2020-10-27/1603766666.png",
+              "title": "標題 (最大40字)2",
+              "desc": "內文 (最大60字)2",
+              "buttons": [
+                {
+                  "title": "標題-準備好了",
+                  "action": "postback",
+                  "content": "準備好了"
+                },
+                {
+                  "title": "標題-我想了解最新任務",
+                  "action": "message",
+                  "content": "我想了解最新任務"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "type": "quickReply",
+        "content": {
+          "items": [
+            {
+              "imageUrl": "https://crm.ogilvyone.info/msgPushImg/2020-10-27/1603766508.png",
+              "action": {
+                "type": "message",
+                "title": "快速回覆",
+                "content": "快速回覆內容"
+              }
+            },
+            {
+              "imageUrl": "",
+              "action": {
+                "type": "postback",
+                "title": "POSTBACK",
+                "content": "POSTBACK內容"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "keywords": [
+      {
+        "keywordId": 120,
+        "keyword": "準備好了",
+        "msg": "msg-BBB",
+        "tags": [
+          21,
+          22
+        ],
+        "richmenu": 13
+      },
+      {
+        "keywordId": 121,
+        "keyword": "我想了解最新任務",
+        "msg": "msg-CCC",
+        "tags": [
+          2,
+          30,
+          43
+        ],
+        "richmenu": null
+      }
+    ]
+  },
+  {
+    "msgId": null,
+    "msgFlag": "msg-BBB",
+    "msgTitle": "訊息B",
+    "msgDesc": "訊息B描述",
+    "msgInfo": [
+      {
+        "type": "text",
+        "content": "文字內容B"
+      },
+      {
+        "type": "image",
+        "content": "https://crm.ogilvyone.info/msgPushImg/2020-10-27/1603766508.png"
+      },
+      {
+        "type": "quickReply",
+        "content": {
+          "items": [
+            {
+              "imageUrl": "https://crm.ogilvyone.info/msgPushImg/2020-10-27/1603766508.png",
+              "action": {
+                "type": "message",
+                "title": "快速回覆2",
+                "content": "快速回覆內容"
+              }
+            },
+            {
+              "imageUrl": "",
+              "action": {
+                "type": "postback",
+                "title": "POSTBACK2",
+                "content": "POSTBACK內容"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "msgId": null,
+    "msgFlag": "msg-CCC",
+    "msgTitle": "訊息C",
+    "msgDesc": "訊息C描述",
+    "msgInfo": [
+      {
+        "type": "text",
+        "content": "文字內容C"
+      },
+      {
+        "type": "image",
+        "content": "https://crm.ogilvyone.info/msgPushImg/2020-10-27/1603766508.png"
+      }
+    ]
+  }
+]
