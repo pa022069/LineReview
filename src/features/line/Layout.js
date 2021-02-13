@@ -19,6 +19,7 @@
 import React, { useState, useEffect } from 'react';
 import { Input } from './component/Input';
 import { Content } from './component/Content';
+import Reply from './component/Reply'
 import { Provider } from './Context';
 
 export const Layout = () => {
@@ -42,6 +43,7 @@ export const Layout = () => {
             })
             .then(function (result) {
                 setState({
+                    ...state,
                     data: result,
                     interFace: result[0].msgInfo,
                     keyWords: result[0].keywords
@@ -110,6 +112,13 @@ export const Layout = () => {
         })
     }
 
+    const setReply = (_content) => {
+        setState({
+            ...state,
+            quickReply: _content
+        })
+    }
+
     const clickAction = (_action, _content) => {
         if (_action !== "message") {
             alert(_content);
@@ -135,7 +144,8 @@ export const Layout = () => {
     const contextValue = {
         state,
         setInput,
-        clickAction
+        clickAction,
+        setReply
     }
 
     return (
@@ -148,7 +158,7 @@ export const Layout = () => {
                             <Content key={idx} {...item} />
                         )}
                     </div>
-                    <div className="quick" id="quick"></div>
+                    <Reply />
                 </div>
                 <Input />
             </div>

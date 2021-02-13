@@ -1,7 +1,6 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import context from '../Context';
 import { CarouselItem } from './CarouselItem';
-import { createPortal } from 'react-dom';
 
 export const Carousel = (props) => {
     // console.log(setInput)
@@ -51,20 +50,14 @@ export const ImageMap = (props) => {
 }
 
 export const QuickReply = (props) => {
-    const { clickAction } = useContext(context);
-    return createPortal(
-        <div className="type__quickreply">
-            <div className="quickreply__content">
-                {props.content.items.map((item, idx) =>
-                    <div key={idx} onClick={() => clickAction(item.action.type, item.action.content)}>
-                        {item.imageUrl !== '' && <span style={{
-                            backgroundImage: `url(${item.imageUrl})`
-                        }}></span>}
-                        <p>{item.action.title}</p>
-                    </div>
-                )}
-            </div>
-        </div>
-        ,document.getElementById("quick")
+    let { items } = props.content;
+    const { setReply } = useContext(context);
+
+    useEffect(() => {
+        setReply(items)
+    },[items])
+
+    return (
+       ''
     );
 }
