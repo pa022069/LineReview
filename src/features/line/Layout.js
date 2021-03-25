@@ -120,11 +120,15 @@ export const Layout = () => {
     }
 
     const clickAction = (_action, _content) => {
-        if (_action !== "message") {
-            alert(_content);
-            return;
+        // if (_action !== "message") {
+        //     alert(_content);
+        //     return;
+        // }
+        try {
+            setMessage("input", _content);
+        } catch (err) {
+            alert(err);
         }
-        setMessage("input", _content);
     }
 
     // 綁定
