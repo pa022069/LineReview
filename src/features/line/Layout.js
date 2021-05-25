@@ -60,9 +60,7 @@ export const Layout = () => {
 
   const scrollBottom = () => { // 下滑置底
     const wrapper = document.querySelector('.group');
-    return new Promise((resolve, reject) => {
-      wrapper.scrollTo(0, wrapper.scrollHeight)
-    })
+    wrapper.scrollTo(0, wrapper.scrollHeight);
   }
   // 加入訊息
   const addMessage = (_type, _value) => { // 加入訊息
@@ -73,11 +71,13 @@ export const Layout = () => {
           "content": _value
         })
       })
+      setTimeout(() => {
+        scrollBottom();
+      }, 200);
     })
   }
   const setMessage = async (_type, _value) => {
     await addMessage(_type, _value);
-    await scrollBottom();
   }
 
   // 檢查關鍵字
@@ -93,7 +93,7 @@ export const Layout = () => {
 
   const setGroup = async (_array) => {
     await addGroup(_array);
-    await scrollBottom();
+    scrollBottom();
   }
 
   const addGroup = (_array) => {
@@ -132,7 +132,6 @@ export const Layout = () => {
     let { length } = interFace;
     if (!interFace[length - 1] || interFace[length - 1] < 0) return;
     if (interFace[length - 1].type === 'text' || 'input') checkKeyWords(interFace[length - 1].content)
-    // console.log(state.interFace);
   }, [state.interFace])
 
   const contextValue = {

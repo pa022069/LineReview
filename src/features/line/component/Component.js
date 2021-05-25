@@ -49,8 +49,6 @@ export const ImageMap = (props) => {
     clickAction(_item.type, _item.text);
   };
 
-  console.log(mapButton);
-
   return (
     <div className="type__imgmap">
       {

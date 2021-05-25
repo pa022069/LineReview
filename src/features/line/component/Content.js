@@ -3,7 +3,6 @@ import { Carousel, Text, Image, Video, ImageMap, QuickReply } from './Component'
 
 export const Content = (props) => {
   const { type } = props;
-  console.log("props", props);
   return (
     <>
       {type === 'quickReply' ? <QuickReply {...props} /> :
